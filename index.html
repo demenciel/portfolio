@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alex's Portfolio</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- CDN JS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- JS -->
+    <script src="script.js"></script>
+
+</head>
+<body>
+    <div class="container">
+        <!-- Section 1 -->
+        <section id="#home" class="section-1">
+            <div class="section-1-container">
+
+            <div class="section-1-heading">
+                <h1>
+                    Hello, <br> I'm Alex Couture
+                </h1>
+                <br>
+                <p>
+                    I'm a web developper <br> based in Quebec, Canada !
+                </p>
+            </div>
+            <div class="section-1-image">
+                <img src="images/ReadyPlayerMe-Avatar.png" alt="John smith" class="person-img">
+            </div>
+        </div>
+        <div class="button">
+            <a class="section-1-btn" href="#projects">Projects</a>
+
+        </div>
+        </section>
+
+        <!-- Navbar -->
+        <nav class="navbar center">
+            <a href="#home" class="navbar-link">Home</a>
+            <a href="#about" class="navbar-link">About</a>
+            <a href="#projects" class="navbar-link">Portfolio</a>
+            <a href="#contact" class="navbar-link">Contact</a>
+        </nav>
+
+        <!-- End of Navbar -->
+
+        <!-- Section 2 -->
+            <section id="about" class="section-2">
+                <h1 class="section-2-heading section-heading">About Me</h1>
+                <div class="progress-bars-wrapper">
+                    <div class="progress-bar">
+                        <p class="progress-text">
+                            HTML
+                            <span>94%</span>
+                        </p>
+                        <div id="html" class="progress-percent"></div>
+                    </div>
+                    <div class="progress-bar">
+                        <p class="progress-text">
+                            CSS
+                            <span>90%</span>
+                        </p>
+                        <div id="css" class="progress-percent"></div>
+                    </div>
+                    <div class="progress-bar">
+                        <p class="progress-text">
+                            Bootstrap
+                            <span>82%</span>
+                        </p>
+                        <div id="bootstrap" class="progress-percent"></div>
+                    </div>
+                    <div class="progress-bar">
+                        <p class="progress-text">
+                            Javascript
+                            <span>80%</span>
+                        </p>
+                        <div id="javascript" class="progress-percent"></div>
+                    </div>
+                    <div class="progress-bar">
+                        <p class="progress-text">
+                            Github
+                            <span>75%</span>
+                        </p>
+                        <div id="github" class="progress-percent"></div>
+                    </div>
+                </div>
+                    
+                    <div class="services">
+                        <div class="service">
+                            <i class="far fa-lightbulb"></i>
+                            <h2 class="service-heading">Creative</h2>
+                        </div>
+                        <div class="service">
+                            <i class="fas fa-cut"></i>
+                            <h2 class="service-heading">Problem Solving</h2>
+                        </div>
+                        <div class="service">
+                            <i class="fas fa-tachometer-alt"></i>
+                            <h2 class="service-heading">Fast</h2>
+                        </div>
+                        <div class="service">
+                            <i class="fas fa-rocket"></i>
+                            <h2 class="service-heading">Dynamic</h2>
+                        </div>
+                    </div>
+
+                 
+            </section>
+        <!-- End of Section 2 -->
+
+        <!-- Section 3 -->
+            <section id="projects" class="section-3">
+                <h1 class="section-3-heading section-heading">My projects</h1>
+                <div class="project-wrapper center">
+                    <div class="project">
+                        <div class="project-text">
+                            <h2 class="project-name">Genny Santé & Beauté</h2>
+                            <h4 class="project-technologies">HTML / CSS / Javascript</h4>
+                            
+                        </div>
+                        <img src="images/Screen Shot 2022-07-01 at 2.16.57 PM.png" alt="" class="project-img">
+                            <a href="http://xn--gennysantbeaut-jkbf.com/" class="project-link" target="#">Go to site</a>
+                    </div>
+                    <div class="project">
+                        <div class="project-text">
+                            <h2 class="project-name">Le Juste Prix</h2>
+                            <h4 class="project-technologies">Bootstrap / Javascript</h4>
+                        </div>
+                        <img src="images/The right pRice.png" alt="" class="project-img">
+                            <a href="https://codepen.io/demenciel/pen/vYRGqNx" class="project-link" target="#">Go to site</a>
+                    </div>
+                </div>
+
+            </section>
+
+        <!-- End of Section 3 -->
+
+        <!-- Section 4 -->
+        <section id="contact" class="section-4">
+            <h1 class="section-heading section-4-heading">Contact Me</h1>
+            <form class="contact-form center">
+                <input type="text" placeholder="Name">
+                <input type="email" placeholder="Email">
+                <textarea placeholder="Message"></textarea>
+                <input type="submit" value="submit" class="contact-form-btn">
+
+            </form>
+        </section>
+        <!-- End of Section 4 -->
+
+        <!-- Section 5 -->
+        <footer class="section-5 center">
+            <div class="social-media">
+                <a href="https://github.com/demenciel" class="social-media-link"><i class="fab fa-github-square"></i></a>
+                <a href="" class="social-media-link"><i class="fab fa-facebook-square"></i></a>
+                <a href="" class="social-media-link"><i class="fab fa-instagram-square"></i></a>
+            </div>
+            <p class="copyright">
+                Copyright &copy; WebForAll
+            </p>
+        </footer>
+        <!-- Section 5 -->
+
+    </div>
+
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+    <script src="script.js"></script>
+</body>
+</html>
