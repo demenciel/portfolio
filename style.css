@@ -111,6 +111,10 @@ html {
     z-index: 100;
 }
 
+.sticky {
+    position: sticky;
+}
+
 .navbar-link {
     font-size: 1.7rem;
     font-weight: 600;
@@ -202,7 +206,7 @@ html {
 
 
 
-#html {
+/* #html {
     width: 94%;
 }
 
@@ -220,7 +224,7 @@ html {
 
 #github {
     width: 75%;
-}
+} */
 
 .services {
     width: 100%;
@@ -457,6 +461,7 @@ html {
 }
 
 @media (max-width: 670px) {
+    
     .section-1-container {
         flex-direction: column;
     }
@@ -484,14 +489,14 @@ html {
 }
 
 @media (max-width: 550px) {
+    .section-1 {
+        flex-direction: column;
+        width: auto;
+    }
     .navbar-link {
         font-size: 1rem;
         margin: 0 2 rem;
     }
-
-    /* .section-2 {
-        padding: 10rem;
-    } */
 
     .section-2-heading {
         margin-bottom: 10rem;
@@ -502,7 +507,7 @@ html {
     }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 532px) {
     html {
         font-size: 55%;
     }
@@ -524,4 +529,44 @@ html {
         font-size: 45%;
     }
 
+}
+
+@media (max-width: 380px) {
+    .navbar-link {
+        font-size: 1rem;
+        margin: 0 1.5rem;
+    }
+
+    .navbar {
+        width: auto ;
+    }
+
+    .contact-form {
+        width: 80%;
+    }
+   
+
+}
+
+@media (max-width: 362px) {
+    .section-1-container {
+        padding: 0;
+    }
+
+    .section-3-heading {
+        width: 75%;
+        text-align: center;
+    }
+
+    .section-4-heading {
+        width: 75%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 325px) {
+    .section-1-image img {
+        width: 80%;
+        
+    }
 }
