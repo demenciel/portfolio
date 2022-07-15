@@ -294,6 +294,8 @@ html {
     border-radius: 10px;
 }
 
+
+
 .project:hover {
     box-shadow: 1rem 1rem 1rem #777;
     
@@ -524,14 +526,10 @@ html {
     }
 }
 
-@media (max-width: 450x) {
+@media (max-width: 450px) {
 
-    .section-1-container {
-        padding: 0;
-    }
-    
-    html {
-        font-size: 45%;
+    #genny-title {
+        font-size: 240%;
     }
 
 }
