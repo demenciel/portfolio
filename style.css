@@ -219,11 +219,19 @@ html {
 }
 
 #javascript {
-    width: 80%;
+    width: 87%;
 }
 
 #github {
     width: 75%;
+}
+
+#jquery {
+    width: 82%;
+}
+
+#swift {
+    width: 55%;
 }
 
 .services {
