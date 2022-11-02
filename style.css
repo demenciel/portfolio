@@ -145,7 +145,7 @@ html {
     transition: width .2s;
 }
 
-.change.navbbar-link::before {
+.change.navbar-link::before {
     width: 130%;
 }
 
@@ -202,36 +202,8 @@ html {
     height: 100%;
     background-color: #1363DF;
     border-radius: .3rem;
-}
+    transition: width 0.5s 0.5s ease-in-out;
 
-
-
-#html {
-    width: 94%;
-}
-
-#css {
-    width: 90%;
-}
-
-#bootstrap {
-    width: 82%;
-}
-
-#javascript {
-    width: 87%;
-}
-
-#github {
-    width: 75%;
-}
-
-#jquery {
-    width: 82%;
-}
-
-#swift {
-    width: 55%;
 }
 
 .services {
