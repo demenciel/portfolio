@@ -569,6 +569,24 @@ div.wave {
 }
 
 @media (max-width: 550px) {
+
+
+    .section-1-image {
+        width: 80%;
+        height: 80%;
+        margin: 1rem 0rem 2rem 0rem;
+
+    }
+
+    .person-img {
+        width: 25rem;
+        height: 25rem;
+    }
+
+    .button {
+        top: 0px;
+    }
+
     .section-1 {
         flex-direction: column;
         width: auto;
