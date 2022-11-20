@@ -76,22 +76,6 @@ document.addEventListener('DOMContentLoaded', function () {
       });
     };
 
-    var i = 0;
-    var target = document.querySelector('#typewriter');
-    var text = target.innerHTML;
-    target.innerHTML = ' ';
-    var speed = 75; 
-    typeWriter(); 
-    function typeWriter() {
-      
-      if (i < text.length) {
-        target.innerHTML += text.charAt(i);
-        i++;
-        setTimeout(typeWriter, speed);
-        
-      }
-    }
-
   };
 
   mainFn();
