@@ -76,6 +76,21 @@ document.addEventListener('DOMContentLoaded', function () {
       });
     };
 
+    var typeId = document.getElementById('typewriter');
+
+    var typewriter = new Typewriter(typeId, {
+      loop: true,
+      delay: 80,
+    });
+
+    typewriter
+      .pauseFor(1000)
+      .typeString('Hello, <b>my name is Alex!</b>')
+      .pauseFor(2000)
+      .deleteChars(200)
+      .pauseFor(100)
+      .start();
+
   };
 
   mainFn();
@@ -84,6 +99,10 @@ document.addEventListener('DOMContentLoaded', function () {
     window.location.reload();
   });
 });
+
+
+// typewriter
+
 
 
 

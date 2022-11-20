@@ -86,7 +86,6 @@ html {
 }
 
 #typewriter {
-    width: 70%;
 }
 
 .section-1-image {
@@ -721,8 +720,8 @@ html {
 @media (max-width: 417px) {
 
     .navbar-link {
-        font-size: .85rem;
-        margin: 0 .5rem;
+        font-size: 1.3rem;
+        margin: 0 .8rem;
     }
 
 }
