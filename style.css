@@ -52,7 +52,7 @@ html {
     z-index: -10;
 }
 
-div.wave {
+.section-1 .wave {
     width: 100%;
     bottom: 0;
     position: absolute;
@@ -85,6 +85,10 @@ div.wave {
 
 }
 
+#typewriter {
+    width: 70%;
+}
+
 .section-1-image {
     display: flex;
     justify-content: center;
@@ -114,7 +118,7 @@ div.wave {
     font-size: 1.7rem;
     font-weight: 700;
     color: #333;
-    background-color: #777;
+    background-color: #EEEEFE;
     border-radius: 20px;
     border: 1px solid #1363DF;
     padding: 0.8rem 1rem;
@@ -313,7 +317,6 @@ div.wave {
 
 .project:hover {
     box-shadow: 1rem 1rem 1rem #777;
-
 }
 
 .project-text {
@@ -382,7 +385,7 @@ div.wave {
     background-color: #333;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
 }
 
@@ -390,10 +393,10 @@ div.wave {
     color: white;
     box-shadow: none;
     border-color: white;
-    margin-bottom: 5rem;
+    margin-bottom: 2rem;
 }
 
-.contact-form {
+/* .contact-form {
     width: 50rem;
     flex-direction: column;
 
@@ -422,30 +425,73 @@ div.wave {
     text-transform: uppercase;
     letter-spacing: 1rem;
     cursor: pointer;
+} */
+
+/* section 4 upgraded */
+
+.contact-form-upgraded {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contact-options {
+    width: 25rem;
+    height: 25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contact-options-icon {
+    width: 13rem;
+    height: 13rem;
+    border-radius: 50%;
+    background-color: #1363DF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: .3rem .3rem .5rem #777;
+}
+
+.contact-options-icon i {
+    font-size: 4.2rem;
+    color:white;
+}
+
+#fiverr-contact {
+    font-size: 4.2rem;
+    color:white;
+}
+
+.contact-button {
+    width: 16rem;
+    height: 4rem;
+    border: 1.5px solid #eef;
+    color: white;
+    border-radius: 10px;
+    background-color: #1363DF;
+    font-size: 1.7rem;
+    font-weight: 600;
+    letter-spacing: .3rem;
+    cursor: pointer;
+    margin-top: 10%;
+    box-shadow: .3rem .3rem .5rem #777;
+    transition: ease .5s;
+    padding: 2% 4%;
+}
+
+.contact-button:hover {
+    color: #1363DF;
+    background-color: white;
+    transform: scale(1.1);
+    box-shadow: .4rem .4rem .6rem #777;
 }
 
 
 /* End of Section 4 */
-
-.certificats {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 1rem;
-    background-color: #fff;
-    box-shadow: .3rem .3rem .5rem #777;
-    position: relative;
-    overflow: hidden;
-    transition: box-shadow .5s;
-    border-radius: 10px;
-}
-
-.certificats:hover {
-    box-shadow: 1rem 1rem 1rem #777;
-    transform: scale(3);
-
-}
 
 
 
@@ -511,13 +557,6 @@ div.wave {
         margin: 3rem 2rem;
     }
 
-    .certificats:hover {
-        box-shadow: 1rem 1rem 1rem #777;
-        transform: scale(1.5);
-
-    }
-
-
 }
 
 
@@ -532,14 +571,16 @@ div.wave {
         text-align: center;
     }
 
-    .section-1-image {
-        margin: 4rem 0rem 2rem 0rem;
+    .contact-form-upgraded {
+        width: 100%;
     }
 
-    .certificats:hover {
-        box-shadow: 1rem 1rem 1rem #777;
-        transform: scale(1);
-
+    
+    .contact-options-icon {
+        font-size: 80%;
+    }
+    .contact-button {
+        font-size: 120%;
     }
 
 
@@ -549,6 +590,27 @@ div.wave {
     .navbar-link {
         font-size: 1.5rem;
         margin: 0 1.5rem;
+    }
+
+    .section-4-heading {
+        margin-bottom: 10%;
+    }
+
+    .contact-form-upgraded {
+        width: 40rem;
+        flex-wrap: wrap;
+
+    }
+
+    .contact-options { 
+        width: 15rem;
+        height: 15rem;
+    }
+    .contact-options-icon {
+        font-size: 80%;
+    }
+    .contact-button {
+        display: none;
     }
 
 }
@@ -568,6 +630,10 @@ div.wave {
     .navbar-link {
         font-size: 1.2rem;
         margin: 0 1.5rem;
+    }
+
+    .contact-button {
+        display: none;
     }
 }
 
@@ -607,6 +673,16 @@ div.wave {
     .contact-form {
         width: 40rem;
     }
+
+    .contact-form-upgraded {
+        width: 40rem;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+
+    .contact-options {
+        margin: 2% 0;
+    }
 }
 
 @media (max-width: 532px) {
@@ -631,6 +707,10 @@ div.wave {
 }
 
 @media (max-width: 450px) {
+
+    .section-1-heading {
+        margin-top: 5rem;
+    }
 
     #genny-title {
         font-size: 240%;
