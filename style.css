@@ -392,7 +392,7 @@ html {
     color: white;
     box-shadow: none;
     border-color: white;
-    margin-bottom: 2rem;
+    margin-bottom: 4rem !important;
 }
 
 /* .contact-form {
