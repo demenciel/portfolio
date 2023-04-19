@@ -5,10 +5,16 @@ let menuIsOn = true;
 var i = 0;
 var y = 0;
 var txt = ["Code Connoisseur", "Engineer of Innovation", "Solutions Architect", "Tech Tactician"];
-var speed = 60;
+var speed = 100;
 var typeWriterId = document.getElementById("developper-type");
+var typeWriterBar = document.getElementById("type-bar");
+var flashInterval = 350;
 
+document.addEventListener('DOMContentLoaded', () => {
+  body.style.animation = "slideWindow 2s";
+});
 
+// menu options
 menuButton.addEventListener("click", (e) => {
   if (menuIsOn) {
     navLinks.style.animation = "slideMenuOff 1s forwards";
@@ -19,6 +25,22 @@ menuButton.addEventListener("click", (e) => {
     menuIsOn = true;
   }
 });
+
+// type writer effects
+function typeBarDisappear() {
+  if (typeWriterBar.style.visibility === "visible") {
+    setTimeout(() => {
+      typeWriterBar.style.visibility = "hidden";
+      typeBarDisappear();
+    }, flashInterval);
+  } else {
+    setTimeout(() => {
+      typeWriterBar.style.visibility = "visible";
+      typeBarDisappear();
+    }, flashInterval);
+  }
+}
+typeBarDisappear();
 
 function typeWriter() {
   if (i < txt[y].length) {
@@ -31,7 +53,6 @@ function typeWriter() {
     setTimeout(resetTypeWriter, 1000);
   }
 }
-
 function resetTypeWriter() {
   if (i > 0) {
     typeWriterId.innerHTML = typeWriterId.innerHTML.slice(0, -1);
@@ -46,6 +67,7 @@ function resetTypeWriter() {
 }
 typeWriter();
 
+// bubble effects
 container.addEventListener("mousemove", (e) => {
   createBubble(e.pageX, e.pageY);
 });

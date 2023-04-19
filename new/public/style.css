@@ -25,6 +25,16 @@ body {
     to {transform: translateX(0);}
 }
 
+@keyframes openWindow {
+    from {opacity: 0;}
+    to {transform: 1;}
+}
+
+@keyframes slideWindow {
+    from {transform: translateX(200%);}
+    to {transform: translateX(0);}
+}
+
 /* navbar */
 i {
     color: #F4EEE0;
@@ -94,6 +104,7 @@ i {
 .section1 {
     width: 100%;
     height: 100vh;
+    position: absolute;
 }
 
 .home-page {
@@ -132,9 +143,17 @@ i {
     font-size: 64px;
 }
 
+#type-bar {
+    border-right: 1px solid #F4EEE0;
+    margin-left: 10px;
+    visibility: visible;
+}
+
 /* section 2: about */
 
 .section2 {
     width: 100%;
     height: 100vh;
+    position: absolute;
+    background-color: #F4EEE0;
 }
