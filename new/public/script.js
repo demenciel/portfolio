@@ -11,7 +11,8 @@ var typeWriterBar = document.getElementById("type-bar");
 var flashInterval = 350;
 
 document.addEventListener('DOMContentLoaded', () => {
-  body.style.animation = "slideWindow 2s";
+  document.getElementById('section1').style.animation = "slideWindowRight 2s";
+  document.querySelector('.d-flex').style.animation = "slideWindowLeft 2s";
 });
 
 // menu options
@@ -25,6 +26,28 @@ menuButton.addEventListener("click", (e) => {
     menuIsOn = true;
   }
 });
+
+function hoverOnMenu(icon, text, iconText) {
+  document.querySelector(icon).addEventListener("mouseover", () => {
+    document.querySelector(iconText).innerHTML = text;
+  });
+}
+
+function hoverOutMenu (icon, iconText) {
+  document.querySelector(icon).addEventListener("mouseout", () => {
+    document.querySelector(iconText).innerHTML = "";
+  });
+}
+
+// hoverOnMenu("#homeIcon", "Home", "#homeText");
+// hoverOutMenu("#homeIcon", "#homeText");
+// hoverOnMenu("#aboutIcon", "About", "#aboutText");
+// hoverOutMenu("#aboutIcon", "#aboutText");
+// hoverOnMenu("#portfolioIcon", "Portfolio", "#portfolioText");
+// hoverOutMenu("#portfolioIcon", "#portfolioText");
+// hoverOnMenu("#contactIcon", "Contact", "#contactText");
+// hoverOutMenu("#contactIcon", "#contactText");
+
 
 // type writer effects
 function typeBarDisappear() {

@@ -20,28 +20,32 @@
 <body id="body">
     <!-- navbar -->
     <div class="d-flex flex-column flex-shrink-0 bg-transparent position-fixed">
-        <button class="btn menu-collapse nav-link">
+        <button class="btn nav-pills menu-collapse nav-link">
             <i class="bi bi-list"></i>
         </button>
         <ul id="navbar" class="nav nav-pills flex-column mb-auto">
-            <li class="nav-item">
-                <a href="#" class="nav-link" aria-current="page">
+            <li id="homeIcon" class="nav-item">
+                <a href="#" class="nav-link scrollto" aria-current="page">
                     <i class="bi bi-house"></i>
+                    <span id="homeText" class="menuText">Home</span>
                 </a>
             </li>
-            <li class="nav-item">
+            <li id="aboutIcon" class="nav-item">
                 <a href="#section2" class="nav-link link-dark">
                     <i class="bi bi-person"></i>
+                    <span id="aboutText" class="menuText">About</span>
                 </a>
             </li>
-            <li class="nav-item">
+            <li id="portfolioIcon" class="nav-item">
                 <a href="#" class="nav-link link-dark">
                     <i class="bi bi-file-earmark-code"></i>
+                    <span id="portfolioText" class="menuText">Portfolio</span>
                 </a>
             </li>
-            <li class="nav-item">
+            <li id="contactIcon" class="nav-item">
                 <a href="#" class="nav-link link-dark">
                     <i class="bi bi-envelope"></i>
+                    <span id="contactText" class="menuText">Contact</span>
                 </a>
             </li>
         </ul>
@@ -59,7 +63,13 @@
     <!-- about -->
     <section id="section2">
         <div class="container container-section2">
+            <h1 class="title title-about">About Me</h1>
+            <hr>
+            <p class="subtitle">Hello! I'm Alexandre Couture, an aspiring full-stack developer and student at 42 Quebec. Skilled in JavaScript, HTML, CSS, Node.js, Express, Bootstrap, jQuery, and C, I'm passionate about building impactful web applications.
 
+                My education at 42 Quebec has provided me with hands-on experience in various projects, fueling my commitment to continuous learning and staying up-to-date with industry trends.
+                
+                Feel free to explore my portfolio and reach out for collaborations or job opportunities.</p>
         </div>
     </section>
 
