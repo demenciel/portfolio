@@ -2,7 +2,7 @@
 
 tsParticles.load("tsparticles", {
   background: {
-    color: "#252525"
+    color: "#252525",
   },
   particles: {
     color: { value: "#fff" },
@@ -10,33 +10,33 @@ tsParticles.load("tsparticles", {
       direction: "bottom",
       enable: true,
       outModes: "out",
-      speed: 2
+      speed: 2,
     },
     number: {
       density: {
         enable: true,
-        area: 800
+        area: 800,
       },
-      value: 400
+      value: 400,
     },
     opacity: {
-      value: 0.7
+      value: 0.7,
     },
     shape: {
-      type: "circle"
+      type: "circle",
     },
     size: {
-      value: 10
+      value: 10,
     },
     wobble: {
       enable: true,
       distance: 10,
-      speed: 10
+      speed: 10,
     },
     zIndex: {
-      value: { min: 0, max: 100 }
-    }
-  }
+      value: { min: 0, max: 100 },
+    },
+  },
 });
 
 // vanilla js
@@ -44,10 +44,9 @@ var navbar = document.querySelector(".navbar");
 var sections = document.querySelectorAll("section");
 var navbarLinks = document.querySelectorAll(".navbar-link");
 var progress = document.querySelector(".progress-bars-wrapper");
-var progressBarPercents = [97, 89, 85, 87, 80, 70, 50];
+var progressBarPercents = [94, 90, 87, 82, 82, 82, 75, 75];
 
-document.addEventListener('DOMContentLoaded', function () {
-
+document.addEventListener("DOMContentLoaded", function () {
   window.addEventListener("scroll", () => {
     mainFn();
   });
@@ -57,8 +56,7 @@ document.addEventListener('DOMContentLoaded', function () {
       navbar.classList.add("sticky");
     } else {
       navbar.classList.remove("sticky");
-    }
-
+    };
     sections.forEach((section, i) => {
       if (window.pageYOffset >= section.offsetTop - 10) {
         navbarLinks.forEach((navbarLink) => {
@@ -76,8 +74,7 @@ document.addEventListener('DOMContentLoaded', function () {
       });
     };
 
-    var typeId = document.getElementById('typewriter');
-
+    var typeId = document.getElementById("typewriter");
     var typewriter = new Typewriter(typeId, {
       loop: true,
       delay: 80,
@@ -85,14 +82,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
     typewriter
       .pauseFor(1000)
-      .typeString('Hello, <b>my name is Alex!</b>')
+      .typeString("Hello, <b>my name is Alex!</b>")
       .pauseFor(2000)
       .deleteChars(200)
       .pauseFor(100)
       .start();
-
   };
-
   mainFn();
 
   window.addEventListener("resize", () => {
@@ -100,10 +95,4 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
-
 // typewriter
-
-
-
-
-
