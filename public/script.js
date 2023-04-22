@@ -33,6 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
 // animation scrollevents
 window.addEventListener("scroll", function () {
   section2Animation();
+  startAutoScroll();
 });
 
 // MENU OPTIONS
@@ -160,3 +161,43 @@ function isInViewport(item) {
     return false;
   }
 }
+
+// carousel soft skills
+const autoScrollInterval = 5000;
+const softSkillsContainer = document.querySelector('.soft-skills-container');
+let autoScrollTimer;
+
+function startAutoScroll() {
+  autoScrollTimer = setInterval(() => {
+    const nextScrollPosition =
+      softSkillsContainer.scrollLeft + (softSkillsContainer.clientWidth / 4);
+    if ((nextScrollPosition) >= (softSkillsContainer.scrollWidth - softSkillsContainer.clientWidth)) {
+      console.log(1);
+      softSkillsContainer.scrollTo({ left: 0, behavior: 'smooth' });
+    } else {
+      softSkillsContainer.scrollTo({
+        left: nextScrollPosition,
+        behavior: 'smooth',
+      });
+    }
+  }, autoScrollInterval);
+}
+
+function stopAutoScroll() {
+  clearInterval(autoScrollTimer);
+};
+
+softSkillsContainer.addEventListener('mouseenter', stopAutoScroll);
+softSkillsContainer.addEventListener('mouseenter', stopAutoScroll);
+
+let project = document.querySelector(".project");
+let projectBg = document.querySelectorAll(".project-bg");
+
+projectBg.forEach(e => {
+  e.addEventListener('mouseover', () => {
+      e.style.opacity = "0.3";
+      e.addEventListener('mouseleave', () => {
+        e.style.opacity = "1";
+      });
+  });
+});
