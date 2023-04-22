@@ -13,6 +13,7 @@ let txt = [
   "Solutions Architect",
   "Tech Tactician",
 ];
+
 let speed = 100;
 let typeWriterId = document.getElementById("developper-type");
 let typeWriterBar = document.getElementById("type-bar");
@@ -23,7 +24,6 @@ let percentages = ["100", "90", "78", "75", "75", "70", "70"];
 // section vars
 const section2 = document.querySelector("#section2");
 
-
 // when window is loaded
 document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("section1").style.animation = "slideWindowRight 2s";
@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // animation scrollevents
-window.addEventListener("scroll", function(){
+window.addEventListener("scroll", function () {
   section2Animation();
 });
 
@@ -71,8 +71,9 @@ function section2Animation() {
         e.style.width = percent + "%";
         e.style.transform = `translateX(${percent})`;
       });
-    };
-    document.querySelector(".container-section2").style.animation = "slideWindowUp 2s";
+    }
+    document.querySelector(".container-section2").style.animation =
+      "slideWindowUp 2s";
   };
 };
 
@@ -136,7 +137,7 @@ function createBubble(x, y) {
   setTimeout(() => {
     bubble.remove();
   }, 300);
-};
+}
 
 // item is in viewport
 function isInViewport(item) {
@@ -158,4 +159,4 @@ function isInViewport(item) {
   } else {
     return false;
   }
-};
+}
