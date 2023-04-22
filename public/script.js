@@ -1,53 +1,80 @@
 const container = document.getElementById("body");
-const navLinks = document.getElementById("navbar");
+// menu var
+const navbar = document.getElementById("navbar");
 const menuButton = document.querySelector(".menu-collapse");
+const navLinks = document.querySelectorAll(".nav-link");
 let menuIsOn = true;
-var i = 0;
-var y = 0;
-var txt = ["Code Connoisseur", "Engineer of Innovation", "Solutions Architect", "Tech Tactician"];
-var speed = 100;
-var typeWriterId = document.getElementById("developper-type");
-var typeWriterBar = document.getElementById("type-bar");
-var flashInterval = 350;
+// type writer var
+let i = 0;
+let y = 0;
+let txt = [
+  "Code Connoisseur",
+  "Engineer of Innovation",
+  "Solutions Architect",
+  "Tech Tactician",
+];
+let speed = 100;
+let typeWriterId = document.getElementById("developper-type");
+let typeWriterBar = document.getElementById("type-bar");
+let flashInterval = 350;
+// percent bars
+const percentBars = document.querySelectorAll(".percentage-fill");
+let percentages = ["100", "90", "78", "75", "75", "70", "70"];
+// section vars
+const section2 = document.querySelector("#section2");
 
-document.addEventListener('DOMContentLoaded', () => {
-  document.getElementById('section1').style.animation = "slideWindowRight 2s";
-  document.querySelector('.d-flex').style.animation = "slideWindowLeft 2s";
+
+// when window is loaded
+document.addEventListener("DOMContentLoaded", () => {
+  document.getElementById("section1").style.animation = "slideWindowRight 2s";
+  document.querySelector(".d-flex").style.animation = "slideWindowUp 2s";
 });
 
-// menu options
+// animation scrollevents
+window.addEventListener("scroll", function(){
+  section2Animation();
+});
+
+// MENU OPTIONS
 menuButton.addEventListener("click", (e) => {
   if (menuIsOn) {
-    navLinks.style.animation = "slideMenuOff 1s forwards";
+    navbar.style.animation = "slideMenuOff 1s forwards";
     menuIsOn = false;
-  }
-  else if (menuIsOn == false) {
-    navLinks.style.animation = "slideMenuOn 1s forwards";
+  } else if (menuIsOn == false) {
+    navbar.style.animation = "slideMenuOn 1s forwards";
     menuIsOn = true;
   }
 });
 
-function hoverOnMenu(icon, text, iconText) {
-  document.querySelector(icon).addEventListener("mouseover", () => {
-    document.querySelector(iconText).innerHTML = text;
+// change color of pill on click and go to section
+if (navLinks.length) {
+  navLinks.forEach((link) => {
+    link.addEventListener("click", (e) => {
+      navLinks.forEach((link) => {
+        link.classList.remove("active");
+      });
+      e.preventDefault();
+      let targetId = link.getAttribute("href").substring(1);
+      let targetElement = document.getElementById(targetId);
+      if (targetElement) targetElement.scrollIntoView({ behavior: "smooth" });
+      link.classList.add("active");
+    });
   });
 }
 
-function hoverOutMenu (icon, iconText) {
-  document.querySelector(icon).addEventListener("mouseout", () => {
-    document.querySelector(iconText).innerHTML = "";
-  });
-}
-
-// hoverOnMenu("#homeIcon", "Home", "#homeText");
-// hoverOutMenu("#homeIcon", "#homeText");
-// hoverOnMenu("#aboutIcon", "About", "#aboutText");
-// hoverOutMenu("#aboutIcon", "#aboutText");
-// hoverOnMenu("#portfolioIcon", "Portfolio", "#portfolioText");
-// hoverOutMenu("#portfolioIcon", "#portfolioText");
-// hoverOnMenu("#contactIcon", "Contact", "#contactText");
-// hoverOutMenu("#contactIcon", "#contactText");
-
+//section2 animations
+function section2Animation() {
+  if (isInViewport(section2)) {
+    if (percentBars.length) {
+      percentBars.forEach((e, i) => {
+        let percent = percentages[i];
+        e.style.width = percent + "%";
+        e.style.transform = `translateX(${percent})`;
+      });
+    };
+    document.querySelector(".container-section2").style.animation = "slideWindowUp 2s";
+  };
+};
 
 // type writer effects
 function typeBarDisappear() {
@@ -71,8 +98,7 @@ function typeWriter() {
     // typeWriterId.innerHTML.style.colors = '#4F4557';
     i++;
     setTimeout(typeWriter, speed);
-  }
-  else {
+  } else {
     setTimeout(resetTypeWriter, 1000);
   }
 }
@@ -83,8 +109,7 @@ function resetTypeWriter() {
     setTimeout(resetTypeWriter, speed);
   } else {
     y++;
-    if (y == 3)
-      y = 0;
+    if (y == 3) y = 0;
     typeWriter();
   }
 }
@@ -102,7 +127,7 @@ function createBubble(x, y) {
 
   bubble.style.left = x + "px";
   bubble.style.top = y + "px";
-  const colors = ['#F4EEE0', '#6D5D6E'];
+  const colors = ["#F4EEE0", "#6D5D6E"];
   const randomColor = colors[Math.floor(Math.random() * colors.length)];
   bubble.style.background = randomColor;
   bubble.style.width = `${Math.random() * 75}px`;
@@ -111,4 +136,26 @@ function createBubble(x, y) {
   setTimeout(() => {
     bubble.remove();
   }, 300);
-}
+};
+
+// item is in viewport
+function isInViewport(item) {
+  var bounding = item.getBoundingClientRect(),
+    myElementHeight = item.offsetHeight,
+    myElementWidth = item.offsetWidth;
+
+  if (
+    bounding.top >= -myElementHeight &&
+    bounding.left >= -myElementWidth &&
+    bounding.right <=
+      (window.innerWidth || document.documentElement.clientWidth) +
+        myElementWidth &&
+    bounding.bottom <=
+      (window.innerHeight || document.documentElement.clientHeight) +
+        myElementHeight
+  ) {
+    return true;
+  } else {
+    return false;
+  }
+};
