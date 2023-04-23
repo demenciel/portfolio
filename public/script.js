@@ -1,9 +1,11 @@
 const container = document.getElementById("body");
+
 // menu var
 const navbar = document.getElementById("navbar");
 const menuButton = document.querySelector(".menu-collapse");
 const navLinks = document.querySelectorAll(".nav-link");
 let menuIsOn = true;
+
 // type writer var
 let i = 0;
 let y = 0;
@@ -18,12 +20,15 @@ let speed = 100;
 let typeWriterId = document.getElementById("developper-type");
 let typeWriterBar = document.getElementById("type-bar");
 let flashInterval = 350;
+
 // percent bars
 const percentBars = document.querySelectorAll(".percentage-fill");
 let percentages = ["100", "90", "78", "75", "75", "70", "70"];
+
 // section vars
 const section2 = document.querySelector("#section2");
-
+const section3 = document.querySelector("#section3");
+const section4 = document.querySelector("#section4");
 // when window is loaded
 document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("section1").style.animation = "slideWindowRight 2s";
@@ -33,7 +38,8 @@ document.addEventListener("DOMContentLoaded", () => {
 // animation scrollevents
 window.addEventListener("scroll", function () {
   section2Animation();
-  startAutoScroll();
+  section3Animation();
+  section4Animation();
 });
 
 // MENU OPTIONS
@@ -97,7 +103,6 @@ typeBarDisappear();
 function typeWriter() {
   if (i < txt[y].length) {
     typeWriterId.innerHTML += txt[y].charAt(i);
-    // typeWriterId.innerHTML.style.colors = '#4F4557';
     i++;
     setTimeout(typeWriter, speed);
   } else {
@@ -132,7 +137,7 @@ function createBubble(x, y) {
   const colors = ["#F4EEE0", "#6D5D6E"];
   const randomColor = colors[Math.floor(Math.random() * colors.length)];
   bubble.style.background = randomColor;
-  bubble.style.width = `${Math.random() * 75}px`;
+  bubble.style.width = `${Math.random() * 100}px`;
   bubble.style.height = bubble.style.width;
 
   setTimeout(() => {
@@ -142,62 +147,46 @@ function createBubble(x, y) {
 
 // item is in viewport
 function isInViewport(item) {
-  var bounding = item.getBoundingClientRect(),
-    myElementHeight = item.offsetHeight,
-    myElementWidth = item.offsetWidth;
-
+  var bounding = item.getBoundingClientRect(), myElementHeight = item.offsetHeight, myElementWidth = item.offsetWidth;
   if (
     bounding.top >= -myElementHeight &&
     bounding.left >= -myElementWidth &&
     bounding.right <=
-      (window.innerWidth || document.documentElement.clientWidth) +
+      (document.documentElement.clientWidth) +
         myElementWidth &&
     bounding.bottom <=
-      (window.innerHeight || document.documentElement.clientHeight) +
+      (document.documentElement.clientHeight) +
         myElementHeight
   ) {
     return true;
   } else {
     return false;
-  }
-}
-
-// carousel soft skills
-const autoScrollInterval = 5000;
-const softSkillsContainer = document.querySelector('.soft-skills-container');
-let autoScrollTimer;
-
-function startAutoScroll() {
-  autoScrollTimer = setInterval(() => {
-    const nextScrollPosition =
-      softSkillsContainer.scrollLeft + (softSkillsContainer.clientWidth / 4);
-    if ((nextScrollPosition) >= (softSkillsContainer.scrollWidth - softSkillsContainer.clientWidth)) {
-      console.log(1);
-      softSkillsContainer.scrollTo({ left: 0, behavior: 'smooth' });
-    } else {
-      softSkillsContainer.scrollTo({
-        left: nextScrollPosition,
-        behavior: 'smooth',
-      });
-    }
-  }, autoScrollInterval);
-}
-
-function stopAutoScroll() {
-  clearInterval(autoScrollTimer);
+  };
 };
 
-softSkillsContainer.addEventListener('mouseenter', stopAutoScroll);
-softSkillsContainer.addEventListener('mouseenter', stopAutoScroll);
-
-let project = document.querySelector(".project");
-let projectBg = document.querySelectorAll(".project-bg");
-
-projectBg.forEach(e => {
-  e.addEventListener('mouseover', () => {
-      e.style.opacity = "0.3";
-      e.addEventListener('mouseleave', () => {
-        e.style.opacity = "1";
+// projects animations
+function section3Animation() {
+  let projects = document.querySelectorAll(".project");
+  if (isInViewport(section3)) {
+    document.querySelector(".container-section3").style.animation = "slideWindowLeft 2s";
+    projects.forEach(project => {
+      project.style.animation = "slideWindowLeftRotate 2s";
+      project.addEventListener('mouseover', () => {
+        const img = project.querySelector('img');
+        img.style.opacity = "0.3";
       });
-  });
-});
+      project.addEventListener('mouseleave', () => {
+        const img = project.querySelector('img');
+        img.style.opacity = "1";
+      });
+    });
+  }
+};
+
+function section4Animation() {
+  if (isInViewport(section4)) {
+    document.querySelector(".container-section4").style.animation = "slideWindowUp 2s";
+  };
+};
+
+

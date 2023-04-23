@@ -1,12 +1,42 @@
 const express = require('express');
+const bodyParser = require('body-parser');
+const nodeMailer = require('nodemailer');
 const app = express();
 const port = process.env.PORT || 3000;
 
-// Serve static files from the "public" directory
+app.use(bodyParser.urlencoded({extended:true}));
+app.use(bodyParser.json());
 app.use(express.static('public'));
 
 app.get('/', (req, res) => {
   res.sendFile(__dirname + 'public/index.html');
+});
+
+app.post("/post", async (req, res) => {
+  const {name, email, subject, message} = req.body;
+  let transporter = nodeMailer.createTransport({
+    host: 'smtp-relay.sendinblue.com',
+    port: 587,
+    secure: false,
+    auth: {
+      user: 'alexcouture5@hotmail.com',
+      pass: 'AKNkZ5y489zQvIUa'
+    }
+  });
+  let mailOptions = {
+    from: `"${name}" <${email}>`,
+    to: 'alexcouture5@hotmail.com',
+    subject: subject,
+    text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`
+  };
+  try {
+    await transporter.sendMail(mailOptions);
+    res.status(200).sendFile(__dirname + '/public/email.html/');
+  } catch (error) {
+    console.error(error);
+    res.status(500).send('Error sending email');
+  };
+
 });
 
 app.listen(port, () => {

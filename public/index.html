@@ -1,250 +1,370 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- bootstrap -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous"/>
+        <!-- css -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"/>
+        <link rel="stylesheet" href="style.css" />
+        <!-- fonts -->
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+        <title>Portfolio</title>
+    </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-    <!-- css -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="style.css">
-    
-    <!-- fonts -->
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <title>Portfolio</title>
-</head>
-
-<body id="body">
-    <!-- navbar -->
-    <div class="d-flex flex-column flex-shrink-0 bg-transparent position-fixed">
-        <button class="btn menu-collapse">
-            <div class="menu-icon">
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-            </div>
-        </button>
-        <ul id="navbar" class="nav nav-pills flex-column mb-auto">
-            <li class="pill-container">
-                <div id="homeIcon" class="nav-item">
-                    <a href="#section1" class="nav-link" aria-current="page">
-                        <div class="icon-text-wrapper">
-                            <i class="bi bi-house"></i>
-                            <span id="homeText" class="menuText">Home</span>
-                        </div>
-                    </a>
+    <body id="body">
+        <!-- navbar -->
+        <div class="d-flex flex-column flex-shrink-0 bg-transparent
+            position-fixed">
+            <button class="btn menu-collapse">
+                <div class="menu-icon">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
                 </div>
-            </li>
-            <li class="pill-container">
-                <div id="aboutIcon" class="nav-item">
-                    <a href="#section2" class="nav-link" aria-current="page">
-                        <div class="icon-text-wrapper">
-                            <i class="bi bi-person"></i>
-                            <span id="aboutText" class="menuText">About</span>
-                        </div>
-                    </a>
-                </div>
-            </li>
-            <li class="pill-container">
-                <div id="portfolioIcon" class="nav-item">
-                    <a href="#section3" class="nav-link" aria-current="page">
-                        <div class="icon-text-wrapper">
-                            <i class="bi bi-file-earmark-code"></i>
-                            <span id="portfolioText" class="menuText">Portfolio</span>
-                        </div>
-                    </a>
-                </div>
-            </li>
-            <li class="pill-container">
-                <div id="contactIcon" class="nav-item">
-                    <a href="#" class="nav-link" aria-current="page">
-                        <div class="icon-text-wrapper">
-                            <i class="bi bi-envelope"></i>
-                            <span id="contactText" class="menuText">Contact</span>
-                        </div>
-                    </a>
-                </div>
-            </li>
-        </ul>
-    </div>
-
-    <!-- home content -->
-    <section id="section1">
-        <div id="home" class="home-page">
-            <div class="background-home"></div>
-            <h1 class="title-home title ">Alexandre Couture</h1>
-            <h3>I'm a <span id="developper-type"></span><span id="type-bar"></span></h3>
+            </button>
+            <ul id="navbar" class="nav nav-pills flex-column mb-auto">
+                <li class="pill-container">
+                    <div id="homeIcon" class="nav-item">
+                        <a href="#section1" class="nav-link"
+                            aria-current="page">
+                            <div class="icon-text-wrapper">
+                                <i class="bi bi-house"></i>
+                                <span id="homeText" class="menuText">Home</span>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+                <li class="pill-container">
+                    <div id="aboutIcon" class="nav-item">
+                        <a href="#section2" class="nav-link"
+                            aria-current="page">
+                            <div class="icon-text-wrapper">
+                                <i class="bi bi-person"></i>
+                                <span id="aboutText" class="menuText">About</span>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+                <li class="pill-container">
+                    <div id="portfolioIcon" class="nav-item">
+                        <a href="#section3" class="nav-link"
+                            aria-current="page">
+                            <div class="icon-text-wrapper">
+                                <i class="bi bi-file-earmark-code"></i>
+                                <span id="portfolioText" class="menuText">Portfolio</span>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+                <li class="pill-container">
+                    <div id="contactIcon" class="nav-item">
+                        <a href="#section4" class="nav-link" aria-current="page">
+                            <div class="icon-text-wrapper">
+                                <i class="bi bi-envelope"></i>
+                                <span id="contactText" class="menuText">Contact</span>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+            </ul>
         </div>
-    </section>
 
-    <!-- about -->
-    <section id="section2">
-        <div class="container container-section2">
-            <div class="about-me-text">
-                <h1 class="title title-section">About Me</h1>
-                <hr class="hr-section">
-                <p class="subtitle">Hello! I'm Alexandre Couture, an aspiring full-stack web developer and student at 42 Quebec. Skilled in JavaScript, HTML, CSS, Node.js, Express, Bootstrap, jQuery, and C, I'm passionate about building impactful web applications.
-                    My education at 42 Quebec has provided me with hands-on experience in various projects, fueling my commitment to continuous learning and staying up-to-date with industry trends.
-                    Feel free to explore my portfolio and reach out for collaborations or job opportunities.
+        <!-- home content -->
+        <section id="section1">
+            <div id="home" class="home-page">
+                <div class="background-home"></div>
+                <h1 class="title-home title">Alexandre Couture</h1>
+                <h3>
+                    I'm a <span id="developper-type"></span><span id="type-bar"></span>
+                </h3>
+            </div>
+        </section>
+
+        <!-- about -->
+        <section id="section2">
+            <div class="container container-section2">
+                <div class="about-me-text">
+                    <h1 class="title title-section">About Me</h1>
+                    <hr class="hr-section" />
+                    <p class="subtitle">
+                        Hello! I'm Alexandre Couture, an aspiring full-stack web
+                        developer
+                        and student at 42 Quebec. Skilled in JavaScript, HTML,
+                        CSS, Node.js,
+                        Express, Bootstrap, jQuery, and C, I'm passionate about
+                        building
+                        impactful web applications. My education at 42 Quebec
+                        has provided
+                        me with hands-on experience in various projects, fueling
+                        my
+                        commitment to continuous learning and staying up-to-date
+                        with
+                        industry trends. Feel free to explore my portfolio and
+                        reach out for
+                        collaborations or job opportunities.
+                    </p>
+                </div>
+                <div class="about-skills">
+                    <h3 class="skills-title">Skills</h3>
+                    <hr />
+                    <div class="bars-container">
+                        <div class="bar-div">
+                            <div class="bar-text">
+                                <h4 class="bar-skill">HTML</h4>
+                                <h4 class="bar-percentage">100%</h4>
+                            </div>
+                            <div class="percentage-bar">
+                                <div class="percentage-fill"></div>
+                            </div>
+                        </div>
+                        <div class="bar-div">
+                            <div class="bar-text">
+                                <h4 class="bar-skill">CSS</h4>
+                                <h4 class="bar-percentage">90%</h4>
+                            </div>
+                            <div class="percentage-bar">
+                                <div class="percentage-fill"></div>
+                            </div>
+                        </div>
+                        <div class="bar-div">
+                            <div class="bar-text">
+                                <h4 class="bar-skill">Javascript</h4>
+                                <h4 class="bar-percentage">78%</h4>
+                            </div>
+                            <div class="percentage-bar">
+                                <div class="percentage-fill"></div>
+                            </div>
+                        </div>
+                        <div class="bar-div">
+                            <div class="bar-text">
+                                <h4 class="bar-skill">C</h4>
+                                <h4 class="bar-percentage">75%</h4>
+                            </div>
+                            <div class="percentage-bar">
+                                <div class="percentage-fill"></div>
+                            </div>
+                        </div>
+                        <div class="bar-div">
+                            <div class="bar-text">
+                                <h4 class="bar-skill">Node.js</h4>
+                                <h4 class="bar-percentage">70%</h4>
+                            </div>
+                            <div class="percentage-bar">
+                                <div class="percentage-fill"></div>
+                            </div>
+                        </div>
+                        <div class="bar-div">
+                            <div class="bar-text">
+                                <h4 class="bar-skill">Git</h4>
+                                <h4 class="bar-percentage">70%</h4>
+                            </div>
+                            <div class="percentage-bar">
+                                <div class="percentage-fill"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="soft-skills-container">
+                    <div class="soft-skill">
+                        <i class="bi bi-emoji-smile"></i>
+                        <h4>Positive Attitude</h4>
+                        <p>
+                            Ability to stay optimistic and maintain a
+                            constructive outlook in
+                            difficult situations.
+                        </p>
+                    </div>
+                    <div class="soft-skill">
+                        <i class="bi bi-people"></i>
+                        <h4>Teamwork</h4>
+                        <p>
+                            Effective collaboration with colleagues, sharing
+                            responsibilities,
+                            and supporting each other.
+                        </p>
+                    </div>
+                    <div class="soft-skill">
+                        <i class="bi bi-lightbulb"></i>
+                        <h4>Problem Solving</h4>
+                        <p>
+                            Identifying issues, analyzing information, and
+                            implementing
+                            solutions in a timely manner.
+                        </p>
+                    </div>
+                    <div class="soft-skill">
+                        <i class="bi bi-chat-text"></i>
+                        <h4>Communication</h4>
+                        <p>
+                            Articulating ideas and information clearly and
+                            concisely to
+                            diverse audiences.
+                        </p>
+                    </div>
+                    <div class="soft-skill">
+                        <i class="bi bi-clock"></i>
+                        <h4>Time Management</h4>
+                        <p>
+                            Prioritizing tasks, setting goals, and efficiently
+                            managing
+                            workloads to meet deadlines.
+                        </p>
+                    </div>
+                    <div class="soft-skill">
+                        <i class="bi bi-award"></i>
+                        <h4>Leadership</h4>
+                        <p>
+                            Inspiring and guiding others to achieve goals, while
+                            promoting a
+                            positive work environment.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- portfolio -->
+        <section id="section3">
+            <div class="container container-section3">
+                <h1 class="title title-section">Portfolio</h1>
+                <hr class="hr-section" />
+                <div class="grid-container">
+                    <div class="project bckgrnd-1">
+                        <div class="project-content">
+                            <h4 class="project-title">Weather App</h4>
+                            <p class="project-tech">Bootstrap / Jquery / API</p>
+                            <a class="btn-project" href="https://github.com/demenciel/weather-app" target="_blank">Go to project</a>
+                        </div>
+                        <img class="project-bg" src="./img/weather-app.png" alt="" />
+                    </div>
+                    <div class="project bckgrnd-2">
+                        <div class="project-content">
+                            <h4 class="project-title">Todo List App</h4>
+                            <p class="project-tech">Jquery / JavaScript</p>
+                            <a class="btn-project" href="https://demenciel.github.io/todo-app-main/" target="_blank">Go to project</a>
+                        </div>
+                        <img class="project-bg" src="./img/todo.png" alt="" />
+                    </div>
+                    <div class="project bckgrnd-3">
+                        <div class="project-content">
+                            <h4 class="project-title">Room Landing Page</h4>
+                            <p class="project-tech">Bootstrap / Jquery / Javascript</p>
+                            <a class="btn-project" href="https://demenciel.github.io/room-frontend/" target="_blank">Go to project</a>
+                        </div>
+                        <img class="project-bg" src="./img/room-frontend.png" alt="" />
+                    </div>
+                    <div class="project bckgrnd-4">
+                        <div class="project-content">
+                            <h4 class="project-title">Ecommerce Landing Page</h4>
+                            <p class="project-tech">Bootstrap / Jquery / Javascript</p>
+                            <a class="btn-project" href="https://demenciel.github.io/Ecommerce-Product-Page/" target="_blank">Go to project</a>
+                        </div>
+                        <img class="project-bg" src="./img/ecommerce.png" alt="" />
+                    </div>
+                    <div class="project bckgrnd-5">
+                        <div class="project-content">
+                            <h4 class="project-title">Small 2d Game</h4>
+                            <p class="project-tech">C / MLX42</p>
+                            <a class="btn-project" href="https://github.com/demenciel/so_long" target="_blank">Go to project</a>
+                        </div>
+                        <img class="project-bg" src="./img/so_long.png" alt=""/>
+                    </div>
+                    <div class="project bckgrnd-6">
+                        <div class="project-content">
+                            <h4 class="project-title">Sorting Algorithm</h4>
+                            <p class="project-tech">C</p>
+                            <a class="btn-project" href="https://github.com/demenciel/push_swap" target="_blank">Go to project</a>
+                        </div>
+                        <img class="project-bg" src="./img/push.png" alt="" />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- contact -->
+        <section id="section4">
+            <div class="container container-section4">
+                <h1 class="title title-section">Contact</h1>
+                <p class="text-center w-responsive mx-auto mb-5">
+                    If you have any questions or would like to discuss your project further, please feel free to reach out!
                 </p>
+                <hr class="hr-section" />
+                <div class="row" style="width: 100%">
+                    <div class="col-md-9 mb-md-0 mb-5">
+                        <form id="contact-form" name="contact-form" action="/post" method="POST">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="md-form mb-4">
+                                        <input type="text" id="name" name="name" class="form-control"/>
+                                        <label for="name" class="">Your name</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="md-form mb-0">
+                                        <input type="text" id="email" name="email" class="form-control"/>
+                                        <label for="email" class="">Your email</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="md-form mb-4">
+                                        <input
+                                            type="text" id="subject" name="subject" class="form-control"/>
+                                        <label for="subject" class="">Subject</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="md-form mb-4">
+                                        <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea"></textarea>
+                                        <label for="message">Your message</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-center text-md-left">
+                                <button type="submit" class="btn btn-send">Send</button>
+                            </div>
+                        </form>
+                        <div class="status"></div>
+                    </div>
+                    <div class="col-md-3 text-center ">
+                        <ul class="list-unstyled mb-0 contact-icons">
+                            <li>
+                                <i class="fas fa-map-marker-alt fa-2x mb-2"></i>
+                                <p>Québec, Qc, Canada</p>
+                            </li>
+                            <li>
+                                <i class="fas fa-phone mt-4 fa-2x mb-2"></i>
+                                <a href="tel: 14185697479">418-569-7479</a>
+                            </li>
+                            <li>
+                                <i class="fas fa-envelope mt-4 fa-2x mb-2"></i>
+                                <p>alexcouture5@hotmail.com</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-            <div class="about-skills">
-                <h3 class="skills-title">Skills</h3>
-                <hr>
-                <div class="bars-container">
-                    <div class="bar-div">
-                        <div class="bar-text">
-                            <h4 class="bar-skill">HTML</h4>
-                            <h4 class="bar-percentage">100%</h4>
-                        </div>
-                        <div class="percentage-bar"><div class="percentage-fill"></div></div>
-                    </div>
-                    <div class="bar-div">
-                        <div class="bar-text">
-                            <h4 class="bar-skill">CSS</h4>
-                            <h4 class="bar-percentage">90%</h4>
-                        </div>
-                        <div class="percentage-bar"><div class="percentage-fill"></div></div>
-                    </div>
-                    <div class="bar-div">
-                        <div class="bar-text">
-                            <h4 class="bar-skill">Javascript</h4>
-                            <h4 class="bar-percentage">78%</h4>
-                        </div>
-                        <div class="percentage-bar"><div class="percentage-fill"></div></div>
-                    </div>
-                    <div class="bar-div">
-                        <div class="bar-text">
-                            <h4 class="bar-skill">C</h4>
-                            <h4 class="bar-percentage">75%</h4>
-                        </div>
-                        <div class="percentage-bar"><div class="percentage-fill"></div></div>
-                    </div>
-                    <div class="bar-div">
-                        <div class="bar-text">
-                            <h4 class="bar-skill">Node.js</h4>
-                            <h4 class="bar-percentage">70%</h4>
-                        </div>
-                        <div class="percentage-bar"><div class="percentage-fill"></div></div>
-                    </div>
-                    <div class="bar-div">
-                        <div class="bar-text">
-                            <h4 class="bar-skill">Git</h4>
-                            <h4 class="bar-percentage">70%</h4>
-                        </div>
-                        <div class="percentage-bar"><div class="percentage-fill"></div></div>
-                    </div>
-                </div>
-            </div>
+        </section>
 
-            <div class="soft-skills-container">
-                <div class="soft-skill">
-                  <i class="bi bi-emoji-smile"></i>
-                  <h4>Positive Attitude</h4>
-                  <p>Ability to stay optimistic and maintain a constructive outlook in difficult situations.</p>
-                </div>
-                <div class="soft-skill">
-                  <i class="bi bi-people"></i>
-                  <h4>Teamwork</h4>
-                  <p>Effective collaboration with colleagues, sharing responsibilities, and supporting each other.</p>
-                </div>
-                <div class="soft-skill">
-                  <i class="bi bi-lightbulb"></i>
-                  <h4>Problem Solving</h4>
-                  <p>Identifying issues, analyzing information, and implementing solutions in a timely manner.</p>
-                </div>
-                <div class="soft-skill">
-                  <i class="bi bi-chat-text"></i>
-                  <h4>Communication</h4>
-                  <p>Articulating ideas and information clearly and concisely to diverse audiences.</p>
-                </div>
-                <div class="soft-skill">
-                  <i class="bi bi-clock"></i>
-                  <h4>Time Management</h4>
-                  <p>Prioritizing tasks, setting goals, and efficiently managing workloads to meet deadlines.</p>
-                </div>
-                <div class="soft-skill">
-                  <i class="bi bi-award"></i>
-                  <h4>Leadership</h4>
-                  <p>Inspiring and guiding others to achieve goals, while promoting a positive work environment.</p>
-                </div>
-              </div>
-        </div>
-    </section>
-
-    <!-- portfolio -->
-    <section id="section3">
-        <div class="container container-section3">
-            <div class="title title-section">Portfolio</div>
-            <hr class="hr-section">
-            <div class="grid-container">
-                <div class="project bckgrnd-1">
-                    <div class="project-content">
-                        <h4 class="project-title">Weather App</h4>
-                        <p class="project-tech">Bootstrap / Jquery / API</p>
-                        <a class="btn-project" href="">Go to project</a>
-                    </div>
-                    <img class="project-bg" src="./img/weather-app.png" alt="">
-                </div>
-                <div class="project bckgrnd-2">
-                    <div class="project-content">
-                        <h4 class="project-title">Todo List App</h4>
-                        <p class="project-tech">Jquery / JavaScript</p>
-                        <a class="btn-project" href="">Go to project</a>
-                    </div>
-                    <img class="project-bg" src="./img/todo.png" alt="">
-                </div>
-                <div class="project bckgrnd-3">
-                    <div class="project-content">
-                        <h4 class="project-title">Room Landing Page</h4>
-                        <p class="project-tech">Bootstrap / Jquery / Javascript</p>
-                        <a class="btn-project" href="">Go to project</a>
-                    </div>
-                    <img class="project-bg" src="./img/room-frontend.png" alt="">
-                </div>
-                <div class="project bckgrnd-4">
-                    <div class="project-content">
-                        <h4 class="project-title">Ecommerce Landing Page</h4>
-                        <p class="project-tech">Bootstrap / Jquery / Javascript</p>
-                        <a class="btn-project" href="">Go to project</a>
-                    </div>
-                    <img class="project-bg" src="./img/ecommerce.png" alt="">
-                </div>
-                <div class="project bckgrnd-5">
-                    <div class="project-content">
-                        <h4 class="project-title">Small 2d Game</h4>
-                        <p class="project-tech">C / MLX42</p>
-                        <a class="btn-project" href="">Go to project</a>
-                    </div>
-                    <img class="project-bg" src="./img/weather-app.png" alt="">
-                </div>
-                <div class="project bckgrnd-6">
-                    <div class="project-content">
-                        <h4 class="project-title">Sorting Algorithm</h4>
-                        <p class="project-tech">C</p>
-                        <a class="btn-project" href="">Go to project</a>
-                    </div>
-                    <img class="project-bg" src="./img/weather-app.png" alt="">
-                </div>
-                
-            </div>
-        </div>
-    </section>
-
-    <!-- my js -->
-    <script src="script.js"></script>
-    <!-- bootstrap js -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
-        integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"
-        integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ"
-        crossorigin="anonymous"></script>
-</body>
-
+        <!-- my js -->
+        <script src="script.js"></script>
+        <!-- bootstrap js -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
+            integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE"
+            crossorigin="anonymous"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"
+            integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ"
+            crossorigin="anonymous"></script>
+    </body>
 </html>

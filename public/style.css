@@ -21,6 +21,7 @@ body {
 .title {
   font-weight: 600;
   font-size: 64px;
+  text-shadow: 2px 2px 2px #6d5d6e;
 }
 
 .title-section {
@@ -37,6 +38,7 @@ body {
   width: 10rem;
   border: 1.5px solid #4f4557;
   margin: 3% auto 6%;
+  text-shadow: 2px 2px 2px #6d5d6e;
 }
 
 .container {
@@ -97,6 +99,16 @@ body {
 
   to {
     transform: translateX(0%);
+  }
+}
+
+@keyframes slideWindowLeftRotate {
+  from {
+    transform: translateX(-200%) rotate(360deg);
+  }
+
+  to {
+    transform: translateX(0%) rotate(0deg);
   }
 }
 
@@ -404,19 +416,19 @@ i.bi {
 
 #section3 {
   width: 100%;
-  height: 100vh;
+  height: 80vh;
   background-color: #f4eee0;
   color: #4f4557;
 }
 
 .grid-container {
   width: 100%;
-  height: 80%;
+  height: 100%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: 200px;
-  grid-column-gap: 2rem;
-  grid-row-gap: 1rem;
+  grid-auto-rows: 33%;
+  grid-column-gap: 3rem;
+  grid-row-gap: 2rem;
 }
 
 .grid-container .project {
@@ -428,12 +440,12 @@ i.bi {
   text-align: center;
   position: relative;
   transition: ease 1s;
+  overflow: hidden;
   -webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
   box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
 }
 
 .project-bg {
-  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -443,27 +455,33 @@ i.bi {
   border-radius: 5px;
 }
 
-.grid-container .project:hover {
-  transform: scale(1.2);
+.project img {
+  position: absolute;
 }
 
 .project-content {
-  opacity: 0;
-  position: relative;
-}
-
-.project-content:hover {
-  opacity: 1;
-  z-index: 3;
-}
-
-.grid-container .project p {
-  position: relative;
-  top: 0;
-}
-
-.project img {
+  width: 100%;
+  height: 100%;
+  margin-top: 10%;
   position: absolute;
+  color: #4f4557;
+  font-weight: 800;
+  z-index: 1;
+  transform: translateY(-150%) rotate(90deg);
+  transform: rotateX(90);
+  transition: ease 1s;
+}
+
+.project-content h4, .project-content p {
+  text-shadow: 2px 2px 2px #6d5d6e;
+}
+
+.grid-container .project:hover .project-content {
+  transform: translateY(0) rotate(0deg);
+}
+
+.grid-container .project:hover {
+  transform: scale(1.2);
 }
 
 .project a {
@@ -476,9 +494,53 @@ i.bi {
   border: 1px solid #6d5d6e;
   background-color: #f4eee0;
   padding: 2% 6%;
+  border-radius: 5px;
   width: 60%;
   position: absolute;
-  bottom: 5px;
+  bottom: 50px;
   left: 50%;
   transform: translateX(-50%);
+}
+
+.btn-project:hover {
+  background-color: #4f4557;
+  color: #F4EEDF;
+}
+
+/* SECTION 4 : CONTACT */
+
+#section4 {
+  width: 100%;
+  height: 60vh;
+  background-color: #F4EEDF;
+  color: #4f4557;
+}
+
+.btn-send {
+  position: relative;
+  float: left;
+  border: 1px solid #6d5d6e;
+  color: #4f4557;
+}
+
+.btn-send:hover {
+  background-color: #4f4557;
+  color: #F4EEDF;
+}
+
+.contact-icons {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between !important;
+}
+
+.contact-icons li {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-icons a {
+  text-decoration: none;
+  color: #4f4557;
 }
