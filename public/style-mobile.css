@@ -28,6 +28,10 @@
     top: 12.5rem;
   }
 
+  .about-skills {
+    height: 30vh;
+  }
+
   .soft-skills-container {
     margin-top: 0;
   }
@@ -56,6 +60,10 @@
     font-size: 48px;
   }
 
+  .soft-skills-container {
+    height: auto;
+  }
+
   .grid-container {
     grid-column-gap: 1.5rem;
     grid-row-gap: 1rem;
@@ -79,8 +87,12 @@
     font-size: 90%;
   }
 
-  #section4 {
-    height: 70vh;
+  .soft-skills-container #communication {
+    word-wrap: break-word;
+  }
+
+  .soft-skills-container #time {
+    word-wrap: break-word;
   }
 
   #section4 .row {
@@ -118,4 +130,53 @@
     top: 0;
   }
 
+}
+
+@media screen and (max-width: 610px) {
+  #home .title {
+    font-size: 36px;
+  }
+
+  .title-home {
+    top: 40%
+  }
+
+  #typewriter-text {
+    top: 45%;
+  }
+
+  .d-flex {
+    margin: 1rem 1rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  #section3 {
+    height: auto;
+  }
+  .grid-container {
+    width: 70%;
+    grid-template-columns: repeat(1, 1fr);
+    grid-row-gap: 2rem;
+  }
+}
+
+@media screen and (max-width: 525px) {
+  #section2 p {
+    font-size: 82%;
+  }
+
+  #section4 {
+    padding-top: 2rem;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  #section1 .title {
+    font-size: 26px;
+  }
+
+  #typewriter-text {
+    font-size: 22px;
+  }
 }
