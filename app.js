@@ -12,6 +12,7 @@ app.get('/', (req, res) => {
   res.sendFile(__dirname + 'public/index.html');
 });
 
+// post for email
 app.post("/post", async (req, res) => {
   const {name, email, subject, message} = req.body;
   let transporter = nodeMailer.createTransport({

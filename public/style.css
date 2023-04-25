@@ -6,6 +6,7 @@ html {
 
 body {
   width: 100%;
+  height: 100%;
   position: absolute;
   font-family: "Montserrat", sans-serif;
   color: #f4eee0;
@@ -416,7 +417,7 @@ i.bi {
 
 #section3 {
   width: 100%;
-  height: 80vh;
+  height: 70vh;
   background-color: #f4eee0;
   color: #4f4557;
 }
@@ -426,7 +427,6 @@ i.bi {
   height: 100%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: 33%;
   grid-column-gap: 3rem;
   grid-row-gap: 2rem;
 }
@@ -535,12 +535,17 @@ i.bi {
   justify-content: space-between !important;
 }
 
-.contact-icons li {
+.contact-icons .li {
   display: flex;
   flex-direction: column;
+
 }
 
 .contact-icons a {
   text-decoration: none;
   color: #4f4557;
+}
+
+.contact-icons {
+  word-wrap: break-word;
 }

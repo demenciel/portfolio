@@ -128,22 +128,24 @@ container.addEventListener("mousemove", (e) => {
 });
 
 function createBubble(x, y) {
-  const bubble = document.createElement("div");
-  bubble.classList.add("bubble");
-  container.appendChild(bubble);
-
-  bubble.style.left = x + "px";
-  bubble.style.top = y + "px";
-  const colors = ["#F4EEE0", "#6D5D6E"];
-  const randomColor = colors[Math.floor(Math.random() * colors.length)];
-  bubble.style.background = randomColor;
-  bubble.style.width = `${Math.random() * 100}px`;
-  bubble.style.height = bubble.style.width;
-
-  setTimeout(() => {
-    bubble.remove();
-  }, 300);
-}
+  if (document.documentElement.clientWidth >= 900) {
+    const bubble = document.createElement("div");
+    bubble.classList.add("bubble");
+    container.appendChild(bubble);
+  
+    bubble.style.left = x + "px";
+    bubble.style.top = y + "px";
+    const colors = ["#F4EEE0", "#6D5D6E"];
+    const randomColor = colors[Math.floor(Math.random() * colors.length)];
+    bubble.style.background = randomColor;
+    bubble.style.width = `${Math.random() * 100}px`;
+    bubble.style.height = bubble.style.width;
+  
+    setTimeout(() => {
+      bubble.remove();
+    }, 300);
+  };
+};
 
 // item is in viewport
 function isInViewport(item) {

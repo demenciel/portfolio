@@ -1,0 +1,121 @@
+
+@media screen and (max-width: 1147px) {
+    .background-home {
+        /* width: 55rem; */
+        right: 0;
+        bottom: 0;
+        background-image: url(img/[removal.ai]_tmp-643ff4838bc7f.png);
+        background-position: bottom;
+      }
+
+      .about-me-text .subtitle p {
+        font-size: 12px;
+      }
+
+      .about-skills {
+        margin-top: 4rem;
+      }
+}
+
+@media screen and (max-width: 992px) {
+  .title-home {
+    position: absolute;
+    top: 8rem;
+  }
+
+  #typewriter-text {
+    position: absolute;
+    top: 12.5rem;
+  }
+
+  .soft-skills-container {
+    margin-top: 0;
+  }
+
+  #section3 {
+    height: 85vh;
+  }
+
+  #section2 {
+    height: 95vh;
+  }
+
+  #section3 .container {
+    padding: 3% 0%;
+  }
+
+  .grid-container {
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+@media screen and (max-width: 790px) {
+  .title {
+    font-size: 48px;
+  }
+
+  .grid-container {
+    grid-column-gap: 1.5rem;
+    grid-row-gap: 1rem;
+  }
+
+  .title-home {
+    top: 34%
+  }
+
+  #typewriter-text {
+    top: 39%;
+  }
+}
+
+@media screen and (max-width: 765px) {
+  .title {
+    font-size: 48px;
+  }
+
+  .about-me-text p {
+    font-size: 90%;
+  }
+
+  #section4 {
+    height: 70vh;
+  }
+
+  #section4 .row {
+    display: flex;
+    /* flex-direction: column; */
+  }
+
+  .contact-icons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly !important;
+    font-size: 90%;
+    height: 10vh;
+  }
+
+  .contact-icons .li {
+    position: relative;
+    width: 33%;
+    height: 100%;
+    display: flex;
+    justify-items: center;
+  }
+
+  .fa-map-marker-alt {
+    height: 32px;
+  }
+
+  #section4 .mb-5 {
+    margin-bottom: 1rem !important;
+  }
+
+  .contact-icons .li i {
+    position: relative;
+    top: 0;
+  }
+
+}
