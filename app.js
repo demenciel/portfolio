@@ -1,8 +1,12 @@
+require('dotenv').config();
 const express = require('express');
 const bodyParser = require('body-parser');
 const nodeMailer = require('nodemailer');
 const app = express();
 const port = process.env.PORT || 3000;
+
+const pass = process.env.PASS_NODE_MAILER;
+
 
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
@@ -21,7 +25,7 @@ app.post("/post", async (req, res) => {
     secure: false,
     auth: {
       user: 'alexcouture5@hotmail.com',
-      pass: 'AKNkZ5y489zQvIUa'
+      pass: pass,
     }
   });
   let mailOptions = {
