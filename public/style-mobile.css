@@ -23,11 +23,6 @@
     top: 8rem;
   }
 
-  #typewriter-text {
-    position: absolute;
-    top: 12.5rem;
-  }
-
   .about-skills {
     height: 30vh;
   }
@@ -178,6 +173,11 @@
 }
 
 @media screen and (max-width: 525px) {
+  .nav-item {
+    width: 65%;
+    height: 65%;
+  }
+  
   #section2 p {
     font-size: 82%;
   }
@@ -192,15 +192,21 @@
 }
 
 @media screen and (max-width: 450px) {
-  .title {
+  #home .title {
     font-size: 26px;
   }
 
   #typewriter-text {
-    font-size: 22px;
+    font-size: 18px;
   }
 
   .soft-skill {
     width: 80%;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .about-skills {
+    margin-top: 13rem;
   }
 }

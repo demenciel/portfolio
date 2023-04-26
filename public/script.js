@@ -43,6 +43,11 @@ window.addEventListener("scroll", function () {
 });
 
 // MENU OPTIONS
+if (window.screen.width < 700) {
+  navbar.style.transform = "translateX(-100%)";
+  navbar.style.opacity = "0";
+  menuIsOn = false;
+}
 menuButton.addEventListener("click", (e) => {
   if (menuIsOn) {
     navbar.style.animation = "slideMenuOff 1s forwards";
@@ -50,6 +55,7 @@ menuButton.addEventListener("click", (e) => {
   } else if (menuIsOn == false) {
     navbar.style.animation = "slideMenuOn 1s forwards";
     menuIsOn = true;
+    navbar.style.opacity = "1";
   }
 });
 

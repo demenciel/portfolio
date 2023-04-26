@@ -30,6 +30,10 @@ body {
   text-align: center;
 }
 
+.title-home #typewriter-text {
+  position: relative;
+}
+
 .subtitle {
   text-align: center;
 }
